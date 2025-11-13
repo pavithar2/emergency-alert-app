@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Alert System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚨 Emergency Alert System</h1>
+            <p>Keep your emergency contacts updated</p>
+        </header>
+        
+        <!-- User Information Section -->
+        <div class="section">
+            <h2>👤 Your Information</h2>
+            <form id="userForm">
+                <input type="text" id="userName" placeholder="Your Full Name" required>
+                <input type="tel" id="userPhone" placeholder="Your Phone Number" required>
+                <input type="text" id="userAddress" placeholder="Your Address" required>
+                <input type="text" id="userMedical" placeholder="Medical Conditions (optional)">
+                <button type="submit">💾 Save Your Info</button>
+            </form>
+        </div>
+
+        <!-- Emergency Contacts Section -->
+        <div class="section">
+            <h2>📞 Emergency Contacts</h2>
+            <form id="contactForm">
+                <input type="text" id="contactName" placeholder="Contact Name" required>
+                <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                <select id="contactType" required>
+                    <option value="">Select Relationship</option>
+                    <option value="family">Family Member</option>
+                    <option value="friend">Friend</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="neighbor">Neighbor</option>
+                </select>
+                <button type="submit">➕ Add Contact</button>
+            </form>
+            
+            <div id="contactsList" class="contacts-list">
+                <!-- Contacts will appear here -->
+            </div>
+        </div>
+
+        <!-- Emergency Alert Section -->
+        <div class="section emergency-section">
+            <h2>🚨 Emergency Alert</h2>
+            <p>In case of emergency, click below to alert your contacts</p>
+            <button id="emergencyBtn" class="emergency-button">🚨 TRIGGER EMERGENCY ALERT</button>
+            <div id="alertStatus" class="alert-status"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
